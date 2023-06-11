@@ -1,0 +1,485 @@
+@import "../colors";
+@import "../fonts";
+
+.header {
+  position: relative;
+  background: $color-primary;
+  box-shadow: -1px -6px 20px rgba(255, 255, 255, 0.05);
+  z-index: 5;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+  }
+
+  &__logo {
+    padding: 16px 0 22px 0;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .button {
+      padding: 16px 24px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    position: relative;
+    align-self: stretch;
+    margin-left: 20px;
+    padding-right: 20px;
+
+    & > a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      align-self: stretch;
+    }
+    
+    &-item {
+      position: relative;
+    }
+
+    &-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 280px;
+      z-index: 100;
+      background: #fff;
+      padding: 20px 32px;
+      box-shadow: -1px -6px 20px rgba(255, 255, 255, 0.05);
+      border-radius: 0px 0px 20px 20px;
+
+      p {
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-bg;
+        margin-bottom: 11px;
+      }
+
+
+
+      a {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        color: $color-bg;
+        text-decoration: none;
+        transition: .3s ease;
+        //margin-bottom: 22px;
+        padding: 11px 0;
+
+        .badge {
+          top: 12px;
+          right: 0;
+        }
+
+        path {
+          stroke: $color-bg;
+          transition: .3s ease;
+        }
+
+        &:hover {
+          color: $color-blue;
+          transition: .3s ease;
+
+          path {
+            stroke: $color-blue;
+            transition: .3s ease;
+          }
+        }
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        a {
+          svg {
+
+          }
+          path {
+            fill: $color-bg;
+          }
+
+          &:hover {
+            path {
+              fill: $color-blue;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .header__account-dropdown {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+
+    &-item {
+      color: #fff;
+      transition: color 0.3s ease;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        color: $color-blue;
+        transition: color 0.3s ease;
+      }
+    }
+  }
+  
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    & > input {
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid #fff;
+      min-width: 400px;
+      padding: 6px 0;
+      outline: none;
+      box-shadow: none;
+      color: #fff;
+    }
+
+    & > button {
+      position: absolute;
+      background: transparent;
+      right: 0;
+      bottom: 53px;
+      padding: 0;
+      outline: none;
+      box-shadow: none;
+      outline: none;
+      border: none;
+    }
+
+    &-results {
+      min-width: 400px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 80px;
+      background-color: #fff;
+      color: $color-bg;
+      display: none;
+      box-shadow: -1px -6px 20px rgba(255, 255, 255, 0.05);
+      border-radius: 0px 0px 30px 30px;
+      z-index: 50;
+
+    }
+
+    &-scroll-wrapper {
+      padding: 20px 0;
+      height: 400px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-controls {
+      display: block;
+      padding: 20px 0;
+      text-align: center;
+      transition: 0.3s ease;
+      @include GradientText;
+      @include font-prompt;
+      border-radius: 0px 0px 30px 30px;
+      text-decoration: none;
+      width: 100%;
+
+      &:hover {
+        color: #fff;
+        background: $gradient;
+        -webkit-text-fill-color: #fff;
+      }
+    }
+
+  }
+
+  .search-result {
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 20px;
+      margin-bottom: 2px;
+      background: #fff;
+      color: $color-bg;
+      text-decoration: none;
+      transition: .3s ease;
+      &:hover {
+        background: #F2F5F7;
+        transition: .3s ease;
+      }
+
+      &-img {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+      }
+
+      &-text {
+        width: calc(100% - 80px);
+      }
+    }
+  }
+
+  &__catalog {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    color: $color-bg;
+    padding: 40px 0;
+    font-weight: 500;
+    z-index: 10;
+
+    &-close {
+      position: absolute;
+      right: 10px;
+      top: -10px;
+      cursor: pointer;
+
+      path {
+        transition: .3s ease;
+      }
+
+      &:hover {
+        path {
+          stroke: $color-blue;
+          transition: .3s ease;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      a {
+        color: $color-bg;
+        transition: .3s ease;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-blue;
+          transition: .3s ease;
+        }
+      }
+    }
+    
+    .container {
+      position: relative;
+    }
+
+  }
+
+  .catalog-image-item {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: $color-grey;
+    margin-bottom: 32px;
+    transition: .3s ease;
+
+    img {
+      display: block;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+      color: $color-blue;
+      transition: .3s ease;
+    }
+  }
+}
+
+.catalog__tab {
+  color: $color-light-grey;
+  font-weight: 500;
+  margin-bottom: 28px;
+  transition: .3s ease;
+
+  &:hover, &.active {
+    color: $color-bg;
+    transition: .3s ease;
+  }
+}
+
+.catalog__sections {
+  position: relative;
+}
+
+.catalog__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 235px;
+  padding: 10px 0;
+
+  & > a {
+    transition: .3s ease;
+    display: block;
+  }
+
+  path {
+    transition: .3s ease;
+    stroke: $color-bg;
+  }
+
+  &:hover {
+    path {
+      transition: .3s ease;
+      stroke: $color-blue;
+    }
+
+    & > a {
+      transition: .3s ease;
+      color: $color-blue;
+    }
+  }
+
+  &-submenu {
+    display: none;
+    position: absolute;
+    left: 235px;
+    top: 0;
+    width: calc(100% - 235px);
+    padding: 10px 0;
+    flex-wrap: wrap;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      li {
+        width: 40%;
+        margin-bottom: 20px;
+        padding-left: 50px;
+
+        a {
+          display: block;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  &-controls {
+    width: 100%;
+    padding: 0 50px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+
+    .button {
+      max-width: 350px;
+    }
+  }
+
+  &:hover {
+
+    .catalog__section-submenu {
+      display: flex;
+    }
+  }
+
+
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  transition: .3s ease;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.mobile-nav {
+  background: $color-bg;
+  text-align: center;
+  a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s ease;
+    &:hover {
+      color: $color-blue;
+      transition: .3s;
+    }
+  }
+}
+
+.main-page {
+  .header {
+    //background: transparent;
+    box-shadow: none;
+    //background: $gradient;
+    background: transparent;
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #fff;
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #fff;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    &__search {
+      & > input {
+        min-width: 220px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #showCatalog {
+    display: none;
+  }
+}

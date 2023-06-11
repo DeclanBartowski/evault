@@ -1,0 +1,118 @@
+@import "colors";
+@import "fonts";
+
+:root {
+  --bs-gutter-x: 20px;
+}
+
+.row {
+  --bs-gutter-x: 20px;
+}
+
+.nav-tabs {
+  border: none;
+  gap: 60px;
+}
+
+
+
+.badge {
+  position: absolute;
+  right: -22px;
+  top: -15px;
+  padding: 3px 6px 5px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  background: $gradient;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.offcanvas-header {
+  background: $color-bg;
+  justify-content: flex-end;
+}
+
+.modal-dialog {
+  color: $color-bg;
+  max-width: 640px;
+}
+
+.modal-name {
+  @include font-prompt;
+  @include font-button;
+  margin-bottom: 30px;
+}
+
+.modal-subtitle {
+  @include font-tab;
+  margin-bottom: 15px;
+}
+
+.modal-content {
+  padding: 40px 22px;
+  box-shadow: -1px -6px 20px rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+
+  .input-line {
+    text-align: left;
+  }
+
+  .input-wrapper {
+
+    input[type="text"], textarea, input[type="date"] {
+
+      color: $color-bg;
+      background: #fff;
+      border: 1px solid $color-primary;
+    }
+  }
+
+  .ui-selectmenu-button.ui-button {
+    color: $color-bg !important;
+    background: #fff !important;
+    border: 1px solid $color-primary !important;
+  }
+
+  form {
+    //width: 300px;
+
+    input, textarea {
+      width: 100%;
+    }
+  }
+
+  input {
+    background: #fff;
+    border: 1px solid $color-grey;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 18px 24px;
+    border-radius: 50px;
+  }
+}
+
+.modal-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+
+
+}
+
+.modal-desc {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 22px;
+}
+
+.input-group {
+
+}

@@ -1,0 +1,86 @@
+@mixin font-prompt {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 600;
+}
+
+@mixin font-raleway {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-title {
+  @include font-prompt;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@mixin font-subtitle {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+@mixin font-def {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+@mixin font-button {
+  @include font-prompt;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+@mixin font-tab {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin font-name-card {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@mixin font-catalog {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin font-text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin font-card-button {
+  @include font-prompt;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin font-crambs {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+h1 {
+  @include font-prompt;
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 86px;
+}
+
+h2 {
+  @include font-prompt;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 54px;
+    line-height: 68px;
+  }
+}

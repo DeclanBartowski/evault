@@ -1,0 +1,87 @@
+@import "../colors";
+@import "../fonts";
+
+.footer {
+  border-top: 1px solid #767487;
+  padding: 65px 0 45px 0;
+
+  &__logo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    div {
+      width: calc(100% - 107px);
+    }
+
+    h3 {
+      display: inline-block;
+      @include GradientText;
+      @include font-prompt;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    padding-left: 107px;
+  }
+
+  &__social {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    padding-left: 107px;
+  }
+
+  &__payments {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+
+    &__logo {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+
+    &__links {
+      flex-wrap: wrap;
+
+      div {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
