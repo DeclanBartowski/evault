@@ -179,8 +179,10 @@ $(document).ready( () => {
     new AirDatepicker('#date1', {
         autoClose: true
     });
-
-
-
+    
+    $(document).on('click','.report__button,.chat-popup-close',function () {
+        $('.chat-popup').toggleClass('chat-popup--active');
+        return false;
+    });
 })
 

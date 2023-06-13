@@ -1,0 +1,420 @@
+h1 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 86px;
+}
+
+h2 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 54px;
+    line-height: 68px;
+  }
+}
+.header {
+  position: relative;
+  background: #222636;
+  box-shadow: -1px -6px 20px rgba(255, 255, 255, 0.05);
+  z-index: 5;
+}
+.header .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.header__logo {
+  padding: 16px 0 22px 0;
+}
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__controls .button {
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.header__account {
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+.header__account > a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  align-self: stretch;
+}
+.header__account-item {
+  position: relative;
+}
+.header__account-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  z-index: 100;
+  background: #fff;
+  padding: 20px 32px;
+  box-shadow: -1px -6px 20px rgba(255, 255, 255, 0.05);
+  border-radius: 0px 0px 20px 20px;
+}
+.header__account-dropdown p {
+  font-size: 20px;
+  line-height: 24px;
+  color: #18181D;
+  margin-bottom: 11px;
+}
+.header__account-dropdown a {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: #18181D;
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 11px 0;
+}
+.header__account-dropdown a .badge {
+  top: 12px;
+  right: 0;
+}
+.header__account-dropdown a path {
+  stroke: #18181D;
+  transition: 0.3s ease;
+}
+.header__account-dropdown a:hover {
+  color: #2575FC;
+  transition: 0.3s ease;
+}
+.header__account-dropdown a:hover path {
+  stroke: #2575FC;
+  transition: 0.3s ease;
+}
+.header__account-dropdown .socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header__account-dropdown .socials a path {
+  fill: #18181D;
+}
+.header__account-dropdown .socials a:hover path {
+  fill: #2575FC;
+}
+.header__account:hover .header__account-dropdown {
+  display: block;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.header__nav-item {
+  color: #fff;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.header__nav-item:hover, .header__nav-item:focus {
+  color: #2575FC;
+  transition: color 0.3s ease;
+}
+.header__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header__search > input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  min-width: 400px;
+  padding: 6px 0;
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+}
+.header__search > button {
+  position: absolute;
+  background: transparent;
+  right: 0;
+  bottom: 53px;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+.header__search-results {
+  min-width: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  background-color: #fff;
+  color: #18181D;
+  display: none;
+  box-shadow: -1px -6px 20px rgba(255, 255, 255, 0.05);
+  border-radius: 0px 0px 30px 30px;
+  z-index: 50;
+}
+.header__search-scroll-wrapper {
+  padding: 20px 0;
+  height: 400px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.header__search-controls {
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  transition: 0.3s ease;
+  background: linear-gradient(90deg, #6A11CB 0%, #2575FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: inline-block;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  border-radius: 0px 0px 30px 30px;
+  text-decoration: none;
+  width: 100%;
+}
+.header__search-controls:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #6A11CB 0%, #2575FC 100%);
+  -webkit-text-fill-color: #fff;
+}
+.header .search-result__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 2px;
+  background: #fff;
+  color: #18181D;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.header .search-result__item:hover {
+  background: #F2F5F7;
+  transition: 0.3s ease;
+}
+.header .search-result__item-img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+.header .search-result__item-text {
+  width: calc(100% - 80px);
+}
+.header__catalog {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background: #fff;
+  color: #18181D;
+  padding: 40px 0;
+  font-weight: 500;
+  z-index: 10;
+}
+.header__catalog-close {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  cursor: pointer;
+}
+.header__catalog-close path {
+  transition: 0.3s ease;
+}
+.header__catalog-close:hover path {
+  stroke: #2575FC;
+  transition: 0.3s ease;
+}
+.header__catalog ul {
+  list-style: none;
+  padding: 0;
+}
+.header__catalog ul a {
+  color: #18181D;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.header__catalog ul a:hover {
+  color: #2575FC;
+  transition: 0.3s ease;
+}
+.header__catalog .container {
+  position: relative;
+}
+.header .catalog-image-item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #767487;
+  margin-bottom: 32px;
+  transition: 0.3s ease;
+}
+.header .catalog-image-item img {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.header .catalog-image-item:hover {
+  color: #2575FC;
+  transition: 0.3s ease;
+}
+
+.catalog__tab {
+  color: #C6C6C6;
+  font-weight: 500;
+  margin-bottom: 28px;
+  transition: 0.3s ease;
+}
+.catalog__tab:hover, .catalog__tab.active {
+  color: #18181D;
+  transition: 0.3s ease;
+}
+
+.catalog__sections {
+  position: relative;
+}
+
+.catalog__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 235px;
+  padding: 10px 0;
+}
+.catalog__section > a {
+  transition: 0.3s ease;
+  display: block;
+}
+.catalog__section path {
+  transition: 0.3s ease;
+  stroke: #18181D;
+}
+.catalog__section:hover path {
+  transition: 0.3s ease;
+  stroke: #2575FC;
+}
+.catalog__section:hover > a {
+  transition: 0.3s ease;
+  color: #2575FC;
+}
+.catalog__section-submenu {
+  display: none;
+  position: absolute;
+  left: 235px;
+  top: 0;
+  width: calc(100% - 235px);
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+.catalog__section-submenu ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.catalog__section-submenu ul li {
+  width: 40%;
+  margin-bottom: 20px;
+  padding-left: 50px;
+}
+.catalog__section-submenu ul li a {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.catalog__section-controls {
+  width: 100%;
+  padding: 0 50px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+.catalog__section-controls .button {
+  max-width: 350px;
+}
+.catalog__section:hover .catalog__section-submenu {
+  display: flex;
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.mobile-menu:hover {
+  color: #2575FC;
+}
+
+.mobile-nav {
+  background: #18181D;
+  text-align: center;
+}
+.mobile-nav a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.mobile-nav a:hover {
+  color: #2575FC;
+  transition: 0.3s;
+}
+
+.main-page .header {
+  box-shadow: none;
+  background: transparent;
+}
+.main-page .header ::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+.main-page .header ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+.main-page .header :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+.main-page .header ::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__search > input {
+    min-width: 220px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #showCatalog {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */

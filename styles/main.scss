@@ -9,6 +9,9 @@
 @import "components/main-slider.scss";
 @import "components/card.scss";
 @import "components/footer.scss";
+@import "components/footer.scss";
+@import "components/chat.scss";
+
 
 
 body {
@@ -45,6 +48,7 @@ body {
 
 .main-page {
   position: relative;
+
   &:before {
     // TODO
     //content: "";
@@ -146,7 +150,8 @@ section {
     position: absolute;
     content: "";
     height: 1px;
-    background: $gradient;;
+    background: $gradient;
+    ;
     left: 0;
     right: 0;
     bottom: -21px;
@@ -154,7 +159,8 @@ section {
     transition: .3s ease;
   }
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     color: #fff;
     transition: .3s ease;
   }
@@ -168,7 +174,7 @@ section {
 }
 
 .column-item {
-  & > * {
+  &>* {
     margin-bottom: 20px;
   }
 }
@@ -220,6 +226,7 @@ section {
 
   &--filled {
     padding-top: 28px;
+
     .big-card__img {
       top: initial;
       bottom: 0;
@@ -261,7 +268,8 @@ a {
   padding: 100px 0;
   background: #fff;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     position: absolute;
     content: "";
     left: 0;
@@ -328,12 +336,13 @@ img {
   }
 }
 
-.about{
+.about {
   padding-top: 100px;
 
   &__logo {
     text-align: center;
     padding-top: 40px;
+
     img {
       display: inline-block;
     }
@@ -380,6 +389,7 @@ img {
 .calendar {
   color: $color-bg;
   margin-bottom: 300px;
+
   h2 {
     margin-bottom: 40px;
   }
@@ -475,7 +485,8 @@ img {
     color: $color-grey;
     text-transform: uppercase;
 
-    &:hover, &.active {
+    &:hover,
+    &.active {
       color: #fff;
     }
   }
@@ -508,7 +519,8 @@ img {
   margin-bottom: 48px;
 }
 
-.ui-front, .air-datepicker-global-container {
+.ui-front,
+.air-datepicker-global-container {
   z-index: 10000;
 }
 
@@ -524,7 +536,9 @@ img {
     padding: 0 24px;
   }
 
-  input[type="text"], textarea, input[type="date"] {
+  input[type="text"],
+  textarea,
+  input[type="date"] {
     width: 100%;
     padding: 18px 24px;
     font-size: 14px;
@@ -550,7 +564,9 @@ img {
       color: $color-error;
     }
 
-    input[type="text"], textarea, input[type="date"] {
+    input[type="text"],
+    textarea,
+    input[type="date"] {
       border-color: $color-error;
       color: $color-error;
     }
@@ -734,7 +750,7 @@ textarea {
     display: none;
   }
 
-  input:checked + label {
+  input:checked+label {
     &:before {
       background: $gradient;
       transition: .3s ease;
@@ -778,7 +794,7 @@ textarea {
     display: none;
   }
 
-  input:checked + label {
+  input:checked+label {
     &:before {
       background: $gradient;
       transition: .3s ease;
@@ -873,7 +889,8 @@ textarea {
 .card-type-btn {
   color: $color-grey;
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     color: #fff;
   }
 }
@@ -959,7 +976,7 @@ textarea {
     gap: 12px;
     align-items: center;
   }
-  
+
   &__price {
     position: relative;
     font-size: 40px;
@@ -1036,10 +1053,11 @@ textarea {
       color: $color-grey;
       @include font-subtitle;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: #fff;
       }
-      
+
       &.active {
         &:after {
           content: "";
@@ -1071,6 +1089,7 @@ textarea {
     width: 175px;
     background-size: cover;
     background-position: center center;
+
     img {
       width: 100%;
       height: 100%;
@@ -1223,7 +1242,8 @@ textarea {
     background-image: url("../images/icons/rating-star-small-not-filled.svg");
     background-size: 100%;
 
-    &.br-selected, &.br-active {
+    &.br-selected,
+    &.br-active {
       background-image: url("../images/icons/rating-star-small.svg");
     }
   }
@@ -1284,7 +1304,7 @@ textarea {
       line-height: 20px;
     }
   }
-  
+
   &__delete {
     cursor: pointer;
     color: $color-grey;
@@ -1315,7 +1335,8 @@ textarea {
   color: #fff;
 }
 
-.input-group-prepend, .input-group-append {
+.input-group-prepend,
+.input-group-append {
   button {
     border: none !important;
     outline: none !important;
@@ -1475,7 +1496,6 @@ textarea {
 .cabinet-content {
   width: calc(100% - 330px);
   margin-left: 50px;
-  margin-bottom: 100px;
 
   &__subtitle {
     @include font-button;
@@ -1519,7 +1539,12 @@ textarea {
   border-radius: 50px !important;
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
   background: $color-blue;
   padding: 8px 14px;
 }
@@ -1621,12 +1646,13 @@ textarea {
   }
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   height: 2px;
   width: 2px;
   background: #C6C6C6;
 }
-::-webkit-scrollbar-thumb:horizontal{
+
+::-webkit-scrollbar-thumb:horizontal {
   background: $gradient;
   transition: .3s;
   cursor: pointer;
@@ -1643,12 +1669,14 @@ textarea {
       right: initial;
     }
   }
+
   .text-line {
 
     span {
       width: 100%;
     }
   }
+
   .cards {
 
     .card {
@@ -1670,9 +1698,10 @@ textarea {
 
 
 
-  .product{
+  .product {
 
-    &__stats, &__desc {
+    &__stats,
+    &__desc {
       width: 100%;
     }
 
@@ -1728,6 +1757,7 @@ textarea {
       align-items: flex-start;
       justify-content: center;
       margin-bottom: 40px;
+
       img {
         width: initial;
       }
@@ -1737,14 +1767,19 @@ textarea {
       width: 100% !important;
     }
   }
+
   .md-hide {
     display: none;
   }
+
   .md-show {
     display: flex;
   }
+
   .waves {
-    &:before, &:after {
+
+    &:before,
+    &:after {
       background-size: cover;
     }
   }
@@ -1759,7 +1794,8 @@ textarea {
 
   .filters-wrapper {
 
-    .filters-content, .filters {
+    .filters-content,
+    .filters {
       width: 100%;
     }
   }
@@ -1826,7 +1862,8 @@ textarea {
     }
   }
 
-  .payments, .carts {
+  .payments,
+  .carts {
     justify-content: center;
   }
 
@@ -1929,6 +1966,7 @@ textarea {
     justify-content: center;
     padding: 20px 40px;
     gap: 20px;
+
     span {
       width: 100%;
     }
@@ -1944,4 +1982,3 @@ textarea {
     padding-bottom: 0;
   }
 }
-
